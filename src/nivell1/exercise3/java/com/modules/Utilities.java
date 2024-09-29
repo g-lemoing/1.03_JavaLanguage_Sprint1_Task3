@@ -18,7 +18,7 @@ public class Utilities {
             }
             fileReader.close();
         } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
+            System.out.println("File not found.");
         }
         return countries;
     }
@@ -41,33 +41,14 @@ public class Utilities {
         }
     }
 
-    public static Map<String, Integer> askUser (Map<String, String> countries){
+    public static String askUser (){
         Scanner scan = new Scanner(System.in);
         String nom;
-        Map<String, Integer> ratings = new HashMap<>();
         do {
             System.out.println("Entra el teu nom (mínim 3 caracteres):");
             nom = scan.nextLine();
         }
         while (nom.length() < 3);
-        ArrayList<String> countryKeys;
-        String k;
-        int points = 0;
-        for (int i = 0; i < 10; i++) {
-            countryKeys = new ArrayList<>(countries.keySet());
-            k = countryKeys.get(new Random().nextInt(countries.size()));
-            System.out.println(k);
-            System.out.println("Quina és la capital de " + k + "?");
-            String response = scan.nextLine();
-            if (response.equals(countries.get(k))) {
-                System.out.println("Resposta correcta! Sumes un punt!");
-                points++;
-            } else {
-                System.out.println("Resposta incorrecta, la capital de " + k + " és " + countries.get(k));
-            }
-            countries.remove(k);
-        }
-        ratings.put(nom, points);
-        return ratings;
+        return nom;
     }
 }

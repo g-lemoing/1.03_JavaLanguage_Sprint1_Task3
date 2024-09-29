@@ -12,18 +12,14 @@ public class Main {
             list1.add(i);
         }
         System.out.println(list1);
-        System.out.println("\nCreem una llista 2 amb el mateix contingut que la llista 1, però al revés.");
-        List<Integer> list2 = new ArrayList<>(list1.reversed());
-        System.out.println(list2);
-        System.out.println("\nIterem la llista 1 i inserim cada element en la llista 2.");
+        System.out.println("\nCreem una llista 2 buida.");
+        List<Integer> list2 = new ArrayList<>();
+        System.out.println("Iterem la llista 1 des del final i inserim cada element en la llista 2.");
 
-        ListIterator<Integer> it = list1.listIterator();
-        System.out.println(it.nextIndex());
-        System.out.println(list1.get(it.nextIndex()));
+        ListIterator<Integer> it = list1.listIterator(list1.size());
 
-        System.out.println(list2);
-        while (it.hasNext()){
-            list2.add(it.next());
+        while (it.hasPrevious()){
+            list2.add(it.previous());
         }
         System.out.println("La llista 2 queda de la següent manera:\n" + list2);
     }
