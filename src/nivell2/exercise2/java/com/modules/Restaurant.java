@@ -3,10 +3,13 @@ package nivell2.exercise2.java.com.modules;
 import java.util.Comparator;
 import java.util.Objects;
 
-public class Restaurant {
+public class Restaurant implements Comparator<Restaurant> {
     private String name;
     private int rating;
 
+    public Restaurant(){
+
+    }
     public Restaurant(String name, int rating){
         this.name = name;
         this.rating = rating;
@@ -20,18 +23,18 @@ public class Restaurant {
         return rating;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
-
     @Override
     public String toString() {
         return "nom: '" + name + '\'' +
                 ", puntuació: " + rating;
+    }
+
+    @Override
+    public int compare(Restaurant o1, Restaurant o2) {
+        if (o1.getName().compareTo(o2.getName()) != 0){
+            return o2.getName().compareTo(o1.getName());
+        }
+        return o2.getRating() - o1.getRating();
     }
 
     @Override
