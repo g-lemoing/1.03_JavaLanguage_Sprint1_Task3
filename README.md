@@ -26,7 +26,7 @@ Requisits: SDK openjdk-22 Oracle OpenJDK 22.0.2
 
 Instal·lació: 
 1. Clonar el repositorio de Github
-git clone https://github.com/g-lemoing/1.01_JavaLanguage_Sprint1_Task1.git
+git clone https://github.com/g-lemoing/1.03_JavaLanguage_Sprint1_Task3.git
 2. Abrir el IDE e importar el proyecto desde el repositorio local desde File > Open.
 
 Ejecución:
@@ -35,7 +35,7 @@ Localizar y abrir las classes Main de cada ejercicio, y ejecutarlas con el Run.
 Contribuciones:
 1. Crear un fork del repositorio: 
 2. Clonar el repositorio hacia el directorio local marcado por git bash
- git clone https://github.com/YOUR-USERNAME/1.01_JavaLanguage_Sprint1_Task1
+ git clone https://github.com/YOUR-USERNAME/1.03_JavaLanguage_Sprint1_Task3
 3. Crear una rama
 git branch BRANCH-NAME
 git checkout BRANCH-NAME
